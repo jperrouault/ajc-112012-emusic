@@ -1,4 +1,13 @@
 Jeremy
 Pierre-Louis
 Michael
+<<<<<<< Updated upstream
 Thibaut
+Simon
+=======
+<<<<<<< Updated upstream
+Thibaut
+=======
+Camille
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
