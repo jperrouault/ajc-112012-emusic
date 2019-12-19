@@ -4,17 +4,15 @@ Michael
 DOCTEUR POULPE
 Simon
 Camille
-Simon
 Adeline
 Camcam
+<<<<<<< Updated upstream
 Reaz roi de France et de Navarre
 Joaquim
 Programmeur c'est une bonne situation ?
 Reaz
 Joaquim
-Marcellin
+Marcellin ?
 Programmeur c'est une bonne situation ? je sais pas bro !
-<<<<<<< Updated upstream
-=======
+Le bazarre
 Silas
->>>>>>> Stashed changes
