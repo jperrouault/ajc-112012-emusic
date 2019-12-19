@@ -11,6 +11,9 @@ public class Produit {
 	private Fournisseur fournisseur;
 	
 	
+	
+	
+	
 	public int getId() {
 		return id;
 	}
