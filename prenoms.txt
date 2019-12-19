@@ -5,6 +5,7 @@ Michael
 <<<<<<< Updated upstream
 Thibaut
 Simon
+<<<<<<< Updated upstream
 Camille
 Simon
 <<<<<<< Updated upstream
