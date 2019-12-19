@@ -1,13 +1,11 @@
 Jeremy
 Pierre-Louis
+<<<<<<< Updated upstream
 Michael
 <<<<<<< Updated upstream
 Thibaut
 Simon
-=======
-<<<<<<< Updated upstream
-Thibaut
-=======
 Camille
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+Simon
+Joaquim
+Adeline
