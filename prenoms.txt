@@ -1,6 +1,9 @@
 Jeremy
 Pierre-Louis
+<<<<<<< Updated upstream
 Michael
 Thibaut
+<<<<<<< Updated upstream
 Simon
 Joaquim
+Adeline
