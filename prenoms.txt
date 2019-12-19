@@ -3,11 +3,16 @@ Pierre-Louis !!
 Michael avec un H comme michael jackson
 DOCTEUR POULPE
 Simon
+<<<<<<< Updated upstream
 Camille
 Adeline
 Camcam
 Reaz roi de France et de Navarre
 Joaquim
+Programmeur c'est une bonne situation ?
+Reaz
+Joaquim
+<<<<<<< Updated upstream
 Marcellin !!!
 Silas
 Marcellin ?
