@@ -9,7 +9,6 @@ Simon
 Camille
 Simon
 <<<<<<< Updated upstream
-Joaquim (Maintenant vous arrêtez vos conneries)
 =======
 >>>>>>> Stashed changes
 Adeline
