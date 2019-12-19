@@ -1,9 +1,13 @@
 Jeremy
-Pierre-Louis
+Pierre-Louis 
 <<<<<<< Updated upstream
 Michael
 Thibaut
 <<<<<<< Updated upstream
 Simon
-Joaquim (BG des iles)
+<<<<<<< Updated upstream
+Joaquim (BG des iles)(LOOSER)
+=======
+Joaquim 
+>>>>>>> Stashed changes
 Adeline
