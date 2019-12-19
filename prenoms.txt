@@ -7,6 +7,15 @@ Camille
 Simon
 Adeline
 Camcam
+<<<<<<< Updated upstream
 Reaz roi de France et de Navarre
 Joaquim
+<<<<<<< Updated upstream
 Programmeur c'est une bonne situation ?
+=======
+=======
+Reaz
+Joaquim
+Marcellin
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
