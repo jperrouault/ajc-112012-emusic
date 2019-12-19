@@ -10,10 +10,6 @@ public class Produit {
 	private BigDecimal prix;
 	private Fournisseur fournisseur;
 	
-	
-	
-	
-	
 	public int getId() {
 		return id;
 	}
@@ -56,7 +52,7 @@ public class Produit {
 	
 	public Produit(int id, String libelle, BigDecimal prix) throws EmptyLibelleException {
 		this.id = id;
-		//On passe par le setter pour gérer le cas "vide"
+		//On passe par le setter pour gï¿½rer le cas "vide"
 		this.setLibelle(libelle);
 		this.prix = prix;
 	}
