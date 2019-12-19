@@ -1,39 +1,20 @@
 Jeremy
 Pierre-Louis !!
-Michael
+Michael avec un H comme michael jackson
 DOCTEUR POULPE
 Simon
 <<<<<<< Updated upstream
 Camille
 Adeline
 Camcam
-<<<<<<< Updated upstream
 Reaz roi de France et de Navarre
 Joaquim
 Programmeur c'est une bonne situation ?
 Reaz
 Joaquim
 <<<<<<< Updated upstream
+Marcellin !!!
+Silas
 Marcellin ?
 Programmeur c'est une bonne situation ? je sais pas bro !
-Silas
-=======
-Marcellin
-<<<<<<< Updated upstream
-Programmeur c'est une bonne situation ? je sais pas bro !
-=======
->>>>>>> Stashed changes
->>>>>>> Stashed changes
-=======
-<<<<<<< Updated upstream
-Programmeur c'est une bonne situation ? je sais pas bro !
-=======
-Joaquim
->>>>>>> Stashed changes
->>>>>>> Stashed changes
-Silas
->>>>>>> Stashed changes
-
-Silas
-Le bazarre
->>>>>>> Stashed changes
+Adrian
