@@ -3,6 +3,7 @@ Pierre-Louis !!
 Michael
 DOCTEUR POULPE
 Simon
+<<<<<<< Updated upstream
 Camille
 Adeline
 Camcam
@@ -12,7 +13,27 @@ Joaquim
 Programmeur c'est une bonne situation ?
 Reaz
 Joaquim
+<<<<<<< Updated upstream
 Marcellin ?
 Programmeur c'est une bonne situation ? je sais pas bro !
 Silas
-Adrian
+=======
+Marcellin
+<<<<<<< Updated upstream
+Programmeur c'est une bonne situation ? je sais pas bro !
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+=======
+<<<<<<< Updated upstream
+Programmeur c'est une bonne situation ? je sais pas bro !
+=======
+Joaquim
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+Silas
+>>>>>>> Stashed changes
+
+Silas
+Le bazarre
+>>>>>>> Stashed changes
