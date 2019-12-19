@@ -11,6 +11,7 @@ Camcam
 Reaz roi de France et de Navarre
 Joaquim
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Programmeur c'est une bonne situation ?
 =======
 =======
@@ -18,4 +19,7 @@ Reaz
 Joaquim
 Marcellin
 >>>>>>> Stashed changes
+>>>>>>> Stashed changes
+=======
+Programmeur c'est une bonne situation ? je sais pas bro !
 >>>>>>> Stashed changes
