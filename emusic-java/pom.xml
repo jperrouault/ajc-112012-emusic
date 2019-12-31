@@ -16,7 +16,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>fr.formation</groupId>
-			<artifactId>emusic-jpa</artifactId>
+			<artifactId>emusic-data-jpa</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
