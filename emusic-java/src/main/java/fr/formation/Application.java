@@ -4,8 +4,10 @@ import java.math.BigDecimal;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 import fr.formation.dao.IDAOAchat;
 import fr.formation.dao.IDAOClient;
@@ -86,5 +88,14 @@ public class Application {
 		
 		//Liste des produits avec leur clients acheteurs
 		srvProduit.listeDesProduitsAvecClients();
+	}
+	
+	
+	
+
+	
+	@Bean //ACTIVE LES @VALUE DANS LES FICHIERS DE CONFIGURATION JAVA
+	public PropertySourcesPlaceholderConfigurer propertyConfigurer() {
+		return new PropertySourcesPlaceholderConfigurer();
 	}
 }

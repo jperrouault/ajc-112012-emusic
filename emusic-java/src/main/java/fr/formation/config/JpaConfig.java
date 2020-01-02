@@ -6,8 +6,12 @@ import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 import org.apache.commons.dbcp2.BasicDataSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
@@ -19,16 +23,23 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories("fr.formation.dao")
+@PropertySource("classpath:data-source.properties")
 public class JpaConfig {
+	@Autowired
+	private Environment env;
+	
+	@Value("${sql.url}")
+	public String url;
+	
 	@Bean
 	public DataSource dataSource() {
 		BasicDataSource dataSource = new BasicDataSource();
 
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/emusic?serverTimezone=UTC");
-		dataSource.setUsername("root");
-		dataSource.setPassword("");
-		dataSource.setMaxTotal(10);
+		dataSource.setUrl(env.getProperty("sql.url"));
+		dataSource.setUsername(env.getProperty("sql.username"));
+		dataSource.setPassword(env.getProperty("sql.password"));
+		dataSource.setMaxTotal(env.getProperty("sql.maxTotal", Integer.class));
 
 		return dataSource;
 	}
