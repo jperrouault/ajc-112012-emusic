@@ -18,7 +18,7 @@ import javax.validation.constraints.NotNull;
 @Entity
 @DiscriminatorValue("2")
 public class Client extends Personne {
-	@Column(name = "CLI_DATE_NAISSANCE", nullable = false)
+	@Column(name = "CLI_DATE_NAISSANCE", nullable = true)
 	@Temporal(TemporalType.DATE)
 	@NotNull
 	private Date dateNaissance;
