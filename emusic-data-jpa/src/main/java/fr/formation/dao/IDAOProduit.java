@@ -11,7 +11,8 @@ import fr.formation.model.Fournisseur;
 import fr.formation.model.Produit;
 
 public interface IDAOProduit extends JpaRepository<Produit, Integer> {
-	
+	//ON REECRIT FINDBYID POUR NE PAS AVOIR DE OPTIONAL<PRODUIT>
+//	public Produit findById(int id);
 	
 	public List<Produit> findByLibelleContaining(String libelle);
 	
