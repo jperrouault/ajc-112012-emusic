@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    	th:replace="~{ layout.html :: layout(~{::title}, ~{::body}) }">
+	<head>
+		<title th:if="${ fournisseur.id == 0 }">Ajouter un fournisseur</title>
+		<title th:if="${ fournisseur.id != 0 }">Modifier le fournisseur</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<h1 th:if="${ fournisseur.id == 0 }">Ajouter un fournisseur</h1>
+			<h1 th:if="${ fournisseur.id != 0 }">Modifier le fournisseur</h1>
+			
+			
+			<div th:errors="${fournisseur.societe}" class="alert alert-danger" role="alert"></div>
+			
+			
+			<form method="POST">
+				<div class="form-group row">
+					<label class="col-2 col-form-label">Nom du contact</label>
+					<div class="col-10">
+						<input class="form-control" type="text" name="nom" th:value="${ fournisseur?.nom }" />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-2 col-form-label">Prénom du contact</label>
+					<div class="col-10">
+						<input class="form-control" type="text" name="prenom" th:value="${ fournisseur?.prenom }" />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-2 col-form-label">Société</label>
+					<div class="col-10">
+						<input class="form-control" type="text" name="societe" th:value="${ fournisseur?.societe }" />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<div class="col-2"></div>
+					<div class="col-10">
+						<th:block th:switch="${ fournisseur.id }">
+							<input th:case="0" class="btn btn-primary" type="submit" value="Ajouter" />
+							<input th:case="*" class="btn btn-warning" type="submit" value="Modifier" />
+						</th:block>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

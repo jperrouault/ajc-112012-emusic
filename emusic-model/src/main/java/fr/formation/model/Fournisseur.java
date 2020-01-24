@@ -15,7 +15,7 @@ import javax.validation.constraints.NotEmpty;
 //@PrimaryKeyJoinColumn(name = "FOU_ID", referencedColumnName = "PER_ID")
 public class Fournisseur extends Personne {
 	@Column(name="FOU_SOCIETE")
-	@NotEmpty
+	@NotEmpty(message = "Le nom de la société doit être saisi !")
 	private String societe;
 	
 	@OneToMany(mappedBy = "fournisseur")

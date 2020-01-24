@@ -1,7 +1,5 @@
 package fr.formation;
 
-import java.math.BigDecimal;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -13,11 +11,6 @@ import fr.formation.dao.IDAOAchat;
 import fr.formation.dao.IDAOClient;
 import fr.formation.dao.IDAOFournisseur;
 import fr.formation.dao.IDAOProduit;
-import fr.formation.model.Achat;
-import fr.formation.model.Client;
-import fr.formation.model.Fournisseur;
-import fr.formation.model.Produit;
-import fr.formation.service.ProduitService;
 
 @Configuration
 @ComponentScan("fr.formation")
@@ -42,8 +35,8 @@ public class Application {
 	@Autowired
 	private IDAOAchat daoAchat;
 	
-	@Autowired
-	private ProduitService srvProduit;
+//	@Autowired
+//	private ProduitService srvProduit;
 	
 	
 	public void run(String[] args) {
@@ -87,7 +80,7 @@ public class Application {
 		
 		
 		//Liste des produits avec leur clients acheteurs
-		srvProduit.listeDesProduitsAvecClients();
+//		srvProduit.listeDesProduitsAvecClients();
 	}
 	
 	
