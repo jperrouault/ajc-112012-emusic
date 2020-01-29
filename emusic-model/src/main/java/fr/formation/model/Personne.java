@@ -13,6 +13,10 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonView;
+
+import fr.formation.projection.Views;
+
 @Entity
 @Table(name = "personne")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -23,6 +27,7 @@ public class Personne {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="PER_ID")
+	@JsonView(Views.Common.class)
 	protected int id;
 
 	@Column(name="PER_NOM", length = 100, nullable = false)

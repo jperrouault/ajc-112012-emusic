@@ -18,6 +18,7 @@ import javax.validation.constraints.Positive;
 import com.fasterxml.jackson.annotation.JsonView;
 
 import fr.formation.exception.EmptyLibelleException;
+import fr.formation.projection.Views;
 
 @Entity
 @Table(name = "produit")
@@ -25,19 +26,24 @@ public class Produit {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "PRO_ID")
+	@JsonView(Views.Common.class)
 	private int id;
 
 	@Column(name = "PRO_LIBELLE")
 	@NotBlank(message = "Le libellé doit être saisi !")
+	@JsonView({ Views.Produit.class, Views.FournisseurFetchingProduits.class })
 	private String libelle;
 
 	@Column(name = "PRO_PRIX")
 	@Positive(message = "Le prix doit être supérieur à 0 !")
+	@JsonView({ Views.Produit.class, Views.FournisseurFetchingProduits.class })
 	private BigDecimal prix;
 
 	@Column(name = "PRO_IMAGE_URL")
+	@JsonView({ Views.Produit.class, Views.FournisseurFetchingProduits.class })
 	private String imageUrl;
-
+	
+	
 	@ManyToOne
 	@JoinColumn(name = "PRO_FOURNISSEUR_ID")
 	@JsonView(Views.Produit.class)

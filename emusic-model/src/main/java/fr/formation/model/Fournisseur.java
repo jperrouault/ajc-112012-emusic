@@ -8,6 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.validation.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonView;
+
+import fr.formation.projection.Views;
+
 
 @Entity
 @DiscriminatorValue("1")
@@ -16,9 +20,11 @@ import javax.validation.constraints.NotEmpty;
 public class Fournisseur extends Personne {
 	@Column(name="FOU_SOCIETE")
 	@NotEmpty(message = "Le nom de la société doit être saisi !")
+	@JsonView(Views.Fournisseur.class)
 	private String societe;
 	
 	@OneToMany(mappedBy = "fournisseur")
+	@JsonView(Views.FournisseurFetchingProduits.class)
 	private List<Produit> produits;
 
 	
