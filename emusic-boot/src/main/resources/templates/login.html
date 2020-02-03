@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    	th:replace="~{ layout.html :: layout(~{::title}, ~{::body}) }">
+	<head>
+		<title>Connexion</title>
+	</head>
+
+	<body>
+		<h1>Se connecter</h1>
+		
+		<form method="POST" action="performLogin">
+			<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+			
+			<div>
+				<label>Nom d'utilisateur</label>
+				<input type="text" name="username" />
+			</div>
+			
+			<div>
+				<label>Mot de passe</label>
+				<input type="password" name="password" />
+			</div>
+			
+			<div>
+				<input type="submit" value="GO !" />
+			</div>
+		</form>
+	</body>
+</html>

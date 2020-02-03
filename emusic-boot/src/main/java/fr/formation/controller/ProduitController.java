@@ -5,6 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -38,6 +39,7 @@ public class ProduitController {
 	
 	
 	@GetMapping("/ajouterProduit")
+	@PreAuthorize("hasRole('ADMIN')")
 	public String add(Model model) {
 		model.addAttribute("produit", new Produit());
 //		model.addAttribute("fournisseurs", daoFournisseur.findAll());
@@ -46,6 +48,7 @@ public class ProduitController {
 	
 	
 	@PostMapping("/ajouterProduit")
+	@PreAuthorize("hasRole('ADMIN')")
 	public String add(@Valid @ModelAttribute Produit produit,
 			BindingResult result, Model model
 //						@RequestParam String libelle,
@@ -78,6 +81,7 @@ public class ProduitController {
 	
 	
 	@GetMapping("/editerProduit")
+	@PreAuthorize("hasRole('ADMIN')")
 	public String edit(Model model, @RequestParam int id) {
 		Produit p = daoProduit.findById(id).orElse(null);
 
@@ -89,6 +93,7 @@ public class ProduitController {
 	
 	
 	@PostMapping("/editerProduit")
+	@PreAuthorize("hasRole('ADMIN')")
 	public String edit(@Valid @ModelAttribute Produit produit,
 			BindingResult result, Model model) {
 		
@@ -108,6 +113,7 @@ public class ProduitController {
 	
 	
 	@GetMapping("/supprimerProduit")
+	@PreAuthorize("hasRole('ADMIN')")
 	public String delete(@RequestParam int id) {
 		daoProduit.deleteById(id);
 		return "redirect:/listeProduits";
@@ -121,6 +127,4 @@ public class ProduitController {
 	public List<Fournisseur> getFournisseurs() {
 		return daoFournisseur.findAll();
 	}
-	
-	
 }
