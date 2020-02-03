@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    	th:replace="~{ layout.html :: layout(~{::title}, ~{::body}) }">
+	<head>
+		<title th:if="${ produit.id == 0 }">Ajouter un produit</title>
+		<title th:if="${ produit.id != 0 }">Modifier le produit</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<h1 th:if="${ produit.id == 0 }">Ajouter un produit</h1>
+			<h1 th:if="${ produit.id != 0 }">Modifier le produit</h1>
+			
+			
+			<div th:errors="${produit.libelle}" class="alert alert-danger" role="alert"></div>
+			<div th:errors="${produit.prix}" class="alert alert-danger" role="alert"></div>
+			
+			
+			<form method="POST">
+				<div class="form-group row">
+					<label class="col-2 col-form-label">Libellé</label>
+					<div class="col-10">
+						<input class="form-control" type="text" name="libelle" th:value="${ produit?.libelle }" />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-2 col-form-label">Prix</label>
+					<div class="col-10">
+						<input class="form-control" type="number" name="prix" th:value="${ produit?.prix }" />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-2 col-form-label">Image</label>
+					<div class="col-10">
+						<input class="form-control" type="text" name="imageUrl" th:value="${ produit?.imageUrl }" />
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label class="col-2 col-form-label">Fournisseur</label>
+					<div class="col-10">
+						<select name="fournisseur.id" class="form-control">
+							<option
+								th:each="fournisseur : ${ fournisseurs }"
+								th:value="${ fournisseur.id }"
+								th:text="${ fournisseur.societe }"
+								th:selected="${ fournisseur.id == produit?.fournisseur?.id }" />
+						</select>
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<div class="col-2"></div>
+					<div class="col-10">
+						<th:block th:switch="${ produit.id }">
+							<input th:case="0" class="btn btn-primary" type="submit" value="Ajouter" />
+							<input th:case="*" class="btn btn-warning" type="submit" value="Modifier" />
+						</th:block>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

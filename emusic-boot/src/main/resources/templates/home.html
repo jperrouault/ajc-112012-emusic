@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+    	th:replace="~{ layout.html :: layout(~{::title}, ~{::body}) }">
+    
+	<head>
+		<meta charset="UTF-8" />
+		<title>Le titre de ma page</title>
+	</head>
+
+	<body>
+		<p>Bonjour [[${ session.utilisateur }]] !</p>
+	</body>
+</html>
